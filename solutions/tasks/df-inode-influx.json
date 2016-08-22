@@ -1,0 +1,34 @@
+{
+    "version": 1,
+    "schedule": {
+        "type": "simple",
+        "interval": "1s"
+    },
+    "workflow": {
+        "collect": {
+            "metrics": {
+                "/intel/procfs/filesystem/rootfs/space_free": {},
+                "/intel/procfs/filesystem/rootfs/space_reserved": {},
+                "/intel/procfs/filesystem/rootfs/inodes_percent_free": {},
+                "/intel/procfs/filesystem/rootfs/inodes_percent_used": {},
+                "/intel/procfs/filesystem/rootfs/device_name": {},
+                "/intel/procfs/filesystem/sys_fs_cgroup/inodes_used": {}
+           },
+            "config": {
+            },
+            "process": null,
+            "publish": [
+                {
+                    "plugin_name": "influx",
+                    "config": {
+                        "host": "172.28.128.6",
+                        "port": 8086,
+                        "database": "snap",
+                        "user": "admin",
+                        "password": "admin"
+                    }
+                }
+            ]
+        }
+    }
+}

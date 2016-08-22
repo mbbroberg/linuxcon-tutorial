@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "schedule": {
+        "type": "simple",
+        "interval": "2s"
+    },
+    "max-failures": 100,
+    "workflow": {
+        "collect": {
+            "metrics": {
+                "/intel/psutil/net/all/packets_recv": {},
+                "/intel/psutil/net/all/packets_sent": {}
+            },
+            "process": null,
+            "publish": [
+                {
+                    "plugin_name": "influx",                            
+                    "config": {
+                        "host": "172.28.128.6",
+                        "port": 8086,
+                        "database": "snap",
+                        "user": "admin",
+                        "password": "admin"
+                    }
+                }
+            ]                                            
+        }
+    }
+}
