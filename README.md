@@ -1,5 +1,5 @@
 # LinuxCon Tutorial
-Hey LinxuCon! :wave:
+Hey LinuxCon! :wave:
 
 I want to walk through learning cool things about telemetry using Snap, the open telemetry framework I've been working on.
 
@@ -18,8 +18,13 @@ You get:
 
 ### How to get going
   * `git clone` [this repository](https://github.com/nanliu/snap-demo-velocity#velocity-2016-snap-demo)
-  * Install the dependencies
-  * `vagrant up` and `vagrant ssh`
+  * Install the dependencies then run:
+
+      ```
+$ vagrant up
+$ vagrant ssh grafana -C '(cd /vagrant/influxdb-grfanana && ./initialize.sh)'
+$ vagrant ssh snap1
+    ```
 
 ## :point_right: Intermediate
 You get:
