@@ -10,7 +10,7 @@ I want to walk through learning cool things about telemetry using Snap, the open
 
 You have a few ways to do that. I'll share them from easiest to hardest.
 
-## Easiest
+## :point_right: Easiest
 You get:
   * Reusable demo environment safely living in containers
   * 1 VM with InfluxDB and Grafana ready to deploy in Docker
@@ -21,7 +21,7 @@ You get:
   * Install the dependencies
   * `vagrant up` and `vagrant ssh`
 
-## Intermediate
+## :point_right: Intermediate
 You get:
   * Snap packages installed on your OS of choice
   * InfluxDB and Grafana up and running in Docker
@@ -34,7 +34,7 @@ You get:
   * `docker-compose up -d`
 
 
-## Hardest: Build from Source
+## :point_right: Hardest: Build from Source
 You get:
   * Experience building Snap from source
   * Further experience being a CLI sorcerer
