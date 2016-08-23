@@ -1,9 +1,9 @@
 # LinuxCon Tutorial
 Hey LinuxCon! :wave:
 
-I want to walk through learning cool things about telemetry using Snap, the open telemetry framework I've been working on.
+I want to walk through learning cool things about telemetry using Snap, the open telemetry framework.
 
-**We want to get to:**
+TL;DR **we want to get to:**
 * Snap v0.15.0 running on your laptop
 * A time-series database configured to collect telemetry
 * Grafana configured to visualize this telemetry
@@ -22,7 +22,7 @@ You get:
 
       ```
 $ vagrant up
-$ vagrant ssh grafana -C '(cd /vagrant/influxdb-grfanana && ./initialize.sh)'
+$ vagrant ssh grafana -C '(cd /vagrant/influxdb-grafana && ./initialize.sh)'
 $ vagrant ssh snap1
     ```
 
@@ -35,9 +35,9 @@ You get:
   * Download latest package from [snap-telemetry.io](http://snap-telemetry.io/download.html)
   * Install for your OS ([syntax in the docs](docs/install-snap.md))
   * `git clone` the [Snap framework](https://github.com/intelsdi-x/snap)
+  * Run `export SNAP_PATH=/path/to/here` where `/path/to/here` is the Snap source
   * `cd` to `examples/influxdb-grafana`
-  * `docker-compose up -d`
-
+  * Run `./run-psutil.sh`
 
 ## :point_right: Hardest: Build from Source
 You get:
